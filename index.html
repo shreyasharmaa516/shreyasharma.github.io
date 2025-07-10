@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya Sharma | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- ─────────── HEADER ─────────── -->
+    <header class="fade-in">
+      <img src="profile.jpg" alt="Profile picture" class="profile" />
+      <h1>Shreya Sharma</h1>
+      <p>BCA Student • Developer • Designer</p>
+    </header>
+
+    <!-- ─────────── ABOUT ─────────── -->
+    <section id="about" class="fade-in">
+      <h2>About&nbsp;Me</h2>
+      <p>
+        I’m a BCA student in Bengaluru who loves blending code with creativity.
+        My interests range from web development and design thinking to
+        scripting useful little automations.
+      </p>
+    </section>
+
+    <!-- ─────────── EDUCATION ─────────── -->
+    <section id="education" class="fade-in slide-up">
+      <h2>Education</h2>
+      <p><strong>CMR University, Bengaluru</strong><br />B.C.A. (2023 – 2026)</p>
+    </section>
+
+    <!-- ─────────── SKILLS ─────────── -->
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>Python</li>
+        <li>HTML&nbsp;&amp;&nbsp;CSS</li>
+        <li>Canva / Figma</li>
+        <li>Design&nbsp;Thinking</li>
+        <li>Communication</li>
+      </ul>
+    </section>
+
+    <!-- ─────────── PROJECTS ─────────── -->
+    <section id="projects" class="fade-in slide-up">
+      <h2>Projects</h2>
+
+      <article class="project card">
+        <h3>Instagram Page Revamp</h3>
+        <p>
+          Applied design‑thinking methods to redefine CMRU’s Instagram strategy,
+          raising engagement by 35 %.
+        </p>
+        <a href="#">Case study →</a>
+      </article>
+
+      <article class="project card">
+        <h3>Log&nbsp;Scanner (Python)</h3>
+        <p>
+          CLI tool that parses large server logs and highlights time‑stamped
+          errors for quick debugging.
+        </p>
+        <a href="#">GitHub repo →</a>
+      </article>
+    </section>
+
+    <!-- ─────────── CONTACT ─────────── -->
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:shreyasharmaa516@gmail.com">shreyasharmaa516@gmail.com</a
+        ><br />
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/shreya-sharma-569a23327" target="_blank"
+          >/in/shreya‑sharma‑569a23327</a
+        >
+      </p>
+    </section>
+
+    <!-- ─────────── FOOTER ─────────── -->
+    <footer>
+      © 2025 Shreya Sharma
+    </footer>
+  </div>
+
+  <!-- ─────────── SMALL JS FOR ANIMATION TRIGGER ─────────── -->
+  <script>
+    /* Intersection Observer to add 'visible' class when elements scroll into view */
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
