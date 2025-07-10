@@ -1,0 +1,155 @@
+/* ---------- COLOR PALETTE ---------- */
+:root {
+  --maroon: #800000;
+  --black: #1a1a1a;
+  --grey-dark: #2e2e2e;
+  --grey-light: #d9d9d9;
+  --white: #ffffff;
+}
+
+/* ---------- BASE RESET ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--black);
+  color: var(--grey-light);
+  line-height: 1.6;
+}
+
+/* ---------- LAYOUT ---------- */
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--maroon);
+  margin-bottom: 12px;
+}
+
+h1 {
+  color: var(--maroon);
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+}
+
+header p {
+  color: var(--grey-light);
+  font-size: 1rem;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: var(--white);
+  border-bottom: 2px solid var(--maroon);
+  display: inline-block;
+}
+
+/* ---------- LISTS ---------- */
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-list li {
+  background: var(--grey-dark);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.skill-list li:hover {
+  background: var(--maroon);
+}
+
+/* ---------- PROJECT CARDS ---------- */
+.card {
+  background: var(--grey-dark);
+  border: 1px solid #444;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: #383838;
+}
+
+.card a {
+  color: #ffcccc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  color: var(--white);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 60px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade-in,
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
+  .skill-list li {
+    font-size: 0.9rem;
+  }
+}
