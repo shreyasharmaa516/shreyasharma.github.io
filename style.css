@@ -1,77 +1,59 @@
-/* ---------- COLOR PALETTE ---------- */
 :root {
-  --maroon: #800000;
-  --black: #1a1a1a;
-  --grey-dark: #2e2e2e;
-  --grey-light: #d9d9d9;
+  --black: #0e0e0e;
   --white: #ffffff;
-}
-
-/* ---------- BASE RESET ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  --grey-dark: #2b2b2b;
+  --grey-mid: #5a5a5a;
+  --grey-light: #dcdcdc;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--black);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--black);
   color: var(--grey-light);
   line-height: 1.6;
 }
 
-/* ---------- LAYOUT ---------- */
 .container {
   max-width: 850px;
   margin: auto;
   padding: 24px;
 }
 
-/* ---------- HEADER ---------- */
 header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .profile {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--maroon);
+  border: 3px solid var(--grey-mid);
   margin-bottom: 12px;
 }
 
 h1 {
   color: var(--white);
-  font-size: 2.4rem;
-  margin-bottom: 4px;
-}
-
-header p {
-  color: var(--grey-light);
-  font-size: 1rem;
-}
-
-/* ---------- SECTIONS ---------- */
-section {
-  margin-bottom: 48px;
+  font-size: 2.5rem;
+  margin-bottom: 6px;
 }
 
 h2 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   color: var(--white);
-  border-bottom: 2px solid var(--maroon);
-  display: inline-block;
+  border-bottom: 2px solid var(--grey-mid);
+  padding-bottom: 4px;
 }
 
-/* ---------- LISTS ---------- */
-.skill-list {
+ul {
   list-style: none;
+  padding-left: 0;
+}
+
+.skill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -81,47 +63,44 @@ h2 {
   background: var(--grey-dark);
   padding: 6px 12px;
   border-radius: 6px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .skill-list li:hover {
-  background: var(--maroon);
+  background: var(--grey-mid);
 }
 
-/* ---------- PROJECT CARDS ---------- */
-.card {
-  background: var(--grey-dark);
-  border: 1px solid #444;
-  padding: 18px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  transition: transform 0.3s, background 0.3s;
+.project {
+  background-color: var(--grey-dark);
+  border: 1px solid var(--grey-mid);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.card:hover {
+.project:hover {
   transform: translateY(-4px);
-  background: #383838;
+  background-color: #383838;
 }
 
-.card a {
-  color: #ffcccc;
+.project a {
+  color: var(--grey-light);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.card a:hover {
+.project a:hover {
   color: var(--white);
 }
 
-/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
-  font-size: 0.9rem;
+  margin-top: 50px;
+  font-size: 0.9em;
   color: #999;
-  margin-top: 60px;
 }
 
-/* ---------- ANIMATIONS ---------- */
 .fade-in,
 .slide-up {
   opacity: 0;
@@ -134,22 +113,19 @@ footer {
   transform: none;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* Mobile */
 @media (max-width: 600px) {
   .container {
     padding: 16px;
-  }
-  h1 {
-    font-size: 1.9rem;
-  }
-  h2 {
-    font-size: 1.3rem;
   }
   .profile {
     width: 100px;
     height: 100px;
   }
-  .skill-list li {
-    font-size: 0.9rem;
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
   }
 }
